@@ -1,0 +1,17 @@
+Edited from Matcha theme (matcha-azul specifically)
+Very Light Highlight:		#efafc4 (old: #f46067)
+Light highlight colour: 	#f06292 (old: #f13039)
+Dark highlight colour: 		#a0406d (old: #db5b5b, #f56b6b, #ad4242, #5294e2, #3497da, #297cdb, #4c85cb)
+Alt highlight colour:		#e1fa48 (old: #3498db, #452886)
+Dark Alt Highlight:			#d6db66 (old: #66b1db, #66a1dc, #0057AE)
+Off-white:					#fafbf6 (old: #f9fafb, #e3e4e7, #f5f6f7, #fcfdfd, #fbfcfc, #fbfbfc #eaedf4 #d3dae3)
+Off-light-grey:				#bbb1b5 (old: #afb4ba, #bbc3c8, #D4D7D7, #d3d8e2, #cfd6e6, #b7c0d3, #c7cacf, #a5afc3)
+Off-grey:					#a09099 (old: #5f687d, #a9acb2, #5c616c, #8c919d, #9398a2, #80908f)
+Off-dark-grey:				#3e3b3c (old: #3b3c3e, #30343e, #303b3e, #6B6c73, #474d5d, #657372, #5e6a6a, #303d41, #32343D)
+Off-black:					#261c21 (old: #1b1d24, #2b3035, #22252c, #2e313d, #2b2f3b, #1E2128, #16171c, #252629, #191b1f, #14161c, #222b2e, #1b2224)
+
+Warning Color:				#e3efaf (old: #F27835)
+Error Color:				#f7004e (old: #FC4138, #ff1616, #ff1111, #ff2121, #f04a50)
+Success Color:				#badb66 (old: #2eb398)
+Suggested Color:			#a0406d (old: #33b165)
+
