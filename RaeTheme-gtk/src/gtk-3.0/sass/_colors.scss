@@ -1,13 +1,29 @@
+//RaeTheme colours
+$rt-hilite-light: #efafc4;
+$rt-hilite: #f06292;
+$rt-emph: #a0406d;
+$rt-hilite-alt: #e1fa48;
+$rt-emph-alt: #d6db66;
+$rt-white: #fafbf6;
+$rt-grey-lite: #bbb1b5;
+$rt-grey: #a09099;
+$rt-grey-dark: #3e3b3c;
+$rt-black: #261c21;
+$rt-warning: #e3efaf;
+$rt-error: #f7004e;
+$rt-success: #badb66;
+$rt-suggested: #a0406d;
+
 // When color definition differs for dark and light variant,
 // it gets @if ed depending on $variant
 
-$base_color: if($variant =='light', #ffffff, #261c21);
-$text_color: if($variant == 'light', #261c21, #bbb1b5);
-$bg_color: if($variant =='light', #f7f7f7, #261c21);
-$fg_color: if($variant =='light', #261c21, #bbb1b5);
+$base_color: if($variant =='light', #ffffff, $rt-black);
+$text_color: if($variant == 'light', $rt-black, $rt-grey-lite);
+$bg_color: if($variant =='light', #f7f7f7, $rt-black);
+$fg_color: if($variant =='light', $rt-black, $rt-grey-lite);
 
 $selected_fg_color: #ffffff;
-$selected_bg_color: #a0406d;
+$selected_bg_color: $rt-emph;
 $alt_selected_bg_color: lighten($selected_bg_color, 6%);
 $selected_borders_color: darken($selected_bg_color, 20%);
 $borders_color: if($variant =='light', rgba(black, 0.15), rgba(black, 0.25));
@@ -22,18 +38,18 @@ $link_visited_color: if($variant == 'light', darken($text_color, 5%),
 
 $selection_mode_bg: if($trans == 'true', rgba($selected_bg_color, 0.95), $selected_bg_color);
 $selection_mode_fg: $selected_fg_color;
-$warning_color: #e3efaf;
-$error_color: #f7004e;
+$warning_color: $rt-warning;
+$error_color: $rt-error;
 $warning_fg_color: white;
 $error_fg_color: white;
-$success_color: #badb66;
+$success_color: $rt-success;
 $destructive_color: $warning_color;
-$suggested_color: #a0406d;
+$suggested_color: $rt-suggested;
 $destructive_fg_color: white;
 $suggested_fg_color: white;
-$progress_color: #a0406d;
+$progress_color: $rt-emph;
 
-$drop_target_color: #efafc4;
+$drop_target_color: $rt-hilite-light;
 
 //insensitive state derived colors
 $insensitive_fg_color: if($variant == 'light', rgba($fg_color, 0.55), rgba($fg_color, 0.45));
@@ -41,14 +57,14 @@ $insensitive_bg_color: if($variant == 'light', mix($bg_color, $base_color, 40%),
 
 $header_bg: #1b2224;
 @if $header=='light' { $header_bg: #f2f2f2; }
-@if $header == 'dark' { $header_bg: if($variant =='light', #261c21, darken(#261c21, 3%)); }
+@if $header == 'dark' { $header_bg: if($variant =='light', $rt-black, darken($rt-black, 3%)); }
 
 $header_bg_backdrop: if($header == 'light', lighten($header_bg, 6%), lighten($header_bg, 5%));
 $header_border: if($header == 'light', darken($header_bg, 7%), darken($header_bg, 4%));
 $header_fg: if($header =='light', $fg_color, mix($selected_bg_color, #cecece, 5%));
 
 $dark_sidebar_bg: #303b3e;
-$dark_sidebar_bg: if($variant == 'light' and $header == 'light', rgba(#f8f8f8, 0.95), rgba(#3e3b3c, 0.95));
+$dark_sidebar_bg: if($variant == 'light' and $header == 'light', rgba(#f8f8f8, 0.95), rgba($rt-grey-dark, 0.95));
 $dark_sidebar_fg: if($variant == 'light' and $header == 'light', $text_color, mix($selected_bg_color, #cecece, 5%));
 $dark_sidebar_border: if($variant == 'light' and $header == 'light', darken($dark_sidebar_bg, 15%), darken($dark_sidebar_bg, 5%));
 
@@ -65,7 +81,7 @@ $osd_insensitive_bg_color: darken($osd_bg_color, 3%);
 $osd_insensitive_fg_color: mix($osd_fg_color, opacify($osd_bg_color, 1), 30%);
 $osd_borders_color: $osd_button_border;
 
-$panel_bg: #261c21;
+$panel_bg: $rt-black;
 $panel_fg: mix($selected_bg_color, #cecece, 5%);
 
 $entry_bg: if($variant == 'light', $base_color, lighten($base_color, 0%));
@@ -83,9 +99,9 @@ $header_button_border: if($variant == 'dark', rgba(darken($header_bg, 12%), 0.42
 //WM Buttons
 
 // Close
-$wm_button_close_bg: if($variant == 'light', #e1fa48, #a0406d);
-$wm_button_close_hover_bg: if($variant == 'light', #efafc4, #efafc4);
-$wm_button_close_active_bg: if($variant == 'light', #a0406d, #e1fa48);
+$wm_button_close_bg: if($variant == 'light', $rt-hilite-alt, $rt-emph);
+$wm_button_close_hover_bg: if($variant == 'light', $rt-hilite-light, $rt-hilite-light);
+$wm_button_close_active_bg: if($variant == 'light', $rt-emph, $rt-hilite-alt);
 
 $wm_icon_close_bg: $header_bg;
 

@@ -5,5 +5,4 @@ run render-assets.sh in gtk3/gtk2 theme folder to rerender assets from the svg
 use gentheme.sh to automate the above and create installable theme directories
 
 After editing scss files, you can reinstall by doing:
-rm OutputThemes -R; ./gentheme.sh
-rm ~/.themes/RaeTheme* -R; cp ./OutputThemes/Gtk/RaeTheme* ~/.themes -r
+rm OutputThemes -R; ./gentheme.sh; rm ~/.themes/RaeTheme* -R; cp ./OutputThemes/Gtk/RaeTheme* ~/.themes -r

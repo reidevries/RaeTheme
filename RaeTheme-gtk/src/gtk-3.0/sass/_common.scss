@@ -1,3 +1,7 @@
+// scaling for UI elements
+// scale from 1 to 2, don't go bigger or smaller really
+$rt-scale-x: 1;
+$rt-scale-y: 1;
 
 $ease-out-quad: cubic-bezier(0.25, 0.46, 0.45, 0.94);
 $backdrop_transition: 200ms ease-out;
@@ -202,9 +206,9 @@ spinner {
 // Text Entries
 //
 entry {
-  min-height: 32px; // old: 22px
+  min-height: $rt-scale-y*22px; // old: 22px
   border: 1px solid;
-  padding: 4px 16px; // old: 2px 8px
+  padding: 4px $rt-scale-x*8px; // old: 2px 8px
 
   caret-color: currentColor;
   border-radius: 4px; // old: 3px
@@ -339,12 +343,12 @@ $button_transition: all 200ms $ease-out-quad;
 }
 
 button {
-  min-height: 32px; // old: 22px
-  min-width: 32px; // old: 20px
+  min-height: $rt-scale-y*24px; // old: 22px
+  min-width: $rt-scale-x*24px; // old: 20px
   transition: $button_transition;
   border: 1px solid;
   border-radius: 3px;
-  padding: 2px 16px; // old: 2px 6px
+  padding: 2px $rt-scale-x*8px; // old: 2px 6px
 
   @include button(normal);
 
@@ -396,19 +400,19 @@ button {
   }
 
   &.image-button {
-    min-width: 24px;
-    padding-left: 5px;
-    padding-right: 5px;
+    min-width: $rt-scale-x*24px;
+    padding-left: $rt-scale-x*8px;
+    padding-right: $rt-scale-x*8px;
   }
 
   &.text-button {
-    padding-left: 12px;
-    padding-right: 12px;
+    padding-left: $rt-scale-x*12px;
+    padding-right: $rt-scale-x*12px;
   }
 
   &.text-button.image-button {
-    padding-left: 5px;
-    padding-right: 5px;
+    padding-left: $rt-scale-x*6px;
+    padding-right: $rt-scale-x*6px;
 
     label {
       &:first-child {
@@ -442,8 +446,8 @@ button {
 
     &.image-button {
       padding: 0;
-      min-height: 36px;
-      min-width: 36px;
+      min-height: $rt-scale-y*36px;
+      min-width: $rt-scale-x*36px;
     }
 
     &:hover { color: $selected_bg_color; }
@@ -832,9 +836,9 @@ headerbar, .titlebar {
 menuitem.button.flat,
 modelbutton.flat {
   transition: none;
-  min-height: 32px; // old: 22px
-  padding-left: 16px; // old: 8px
-  padding-right: 16px; // old: 8px
+  min-height: $rt-scale-y*24px; // old: 22px
+  padding-left: $rt-scale-x*12px; // old: 8px
+  padding-right:$rt-scale-x* 12px; // old: 8px
   outline-offset: -3px;
   border-radius: 2px;
 
@@ -847,10 +851,10 @@ modelbutton.flat {
 
   // FIXME: temporary workaround
   check:last-child,
-  radio:last-child { margin-left: 12px; } // old: 8px
+  radio:last-child { margin-left: $rt-scale-x*8px; } // old: 8px
 
   check:first-child,
-  radio:first-child { margin-right: 12px; } // old: 8px
+  radio:first-child { margin-right: $rt-scale-x*8px; } // old: 8px
 }
 
 modelbutton.flat arrow {
@@ -907,7 +911,7 @@ spinbutton {
   &:disabled { color: $insensitive_fg_color; }
 
   &:not(.vertical) {
-    entry { min-width: 28px; }
+    entry { min-width: $rt-scale-x*20px; }
 
     button, entry { @extend %linked; }
 
@@ -1108,12 +1112,12 @@ actionbar {
 //
 // Headerbars
 //
-$_header_radius: if($variant=='light', 4px, 4px); // old: if($variant=='light', 2px, 2px)
+$_header_radius: $rt-scale-x*2px; // old: if($variant=='light', 2px, 2px)
 
 headerbar,
 %titlebar {
-  min-height: 64px; // old: 42px
-  padding: 0 16px; // old: 0 10px
+  min-height: $rt-scale-y*42px; // old: 42px
+  padding: 0 $rt-scale-x*12px; // old: 0 10px
   color: $header_fg;
   background-color: $header_bg;
 
@@ -1124,14 +1128,14 @@ headerbar,
   }
 
   .title {
-    padding-left: 16px; // old: 12px
-    padding-right: 16px; // old: 12px
+    padding-left: $rt-scale-x*12px; // old: 12px
+    padding-right: $rt-scale-x*12px; // old: 12px
   }
 
   .subtitle {
     font-size: smaller;
-    padding-left: 16px; // old: 12px
-    padding-right: 16px; // old: 12px
+    padding-left: $rt-scale-x*12px; // old: 12px
+    padding-right: $rt-scale-x*12px; // old: 12px
     @extend .dim-label;
   }
 
@@ -1151,8 +1155,8 @@ headerbar,
 
     .selection-menu {
       box-shadow: none;
-      padding-left: 16px; // old: 10px
-      padding-right: 16px; // old: 10px
+      padding-left: $rt-scale-x*12px; // old: 10px
+      padding-right: $rt-scale-x*12px; // old: 10px
       GtkArrow { -GtkArrow-arrow-scaling: 1; }
 
       .arrow {
@@ -1186,8 +1190,8 @@ headerbar,
 
     button.titlebutton {
       border: none;
-      min-height: 32px; // old: 22px
-      min-width: 32px; // old: 22px
+      min-height: $rt-scale-y*22px; // old: 22px
+      min-width: $rt-scale-x*22px; // old: 22px
       margin: 0;
       padding: 0;
     }
@@ -1852,7 +1856,7 @@ menubar,
 
   > menuitem {
     transition: all 0.2s cubic-bezier(0.0, 0.0, 0.2, 1);
-    padding: 6px 10px; // old: 4px 10px
+    padding: 4px 10px; // old: 4px 10px
     border: none;
     border-radius: 0 0px 0 0;
 
@@ -2059,9 +2063,9 @@ notebook {
         border-#{$_bpos}: 1px solid $borders_color;
 
         > tabs > tab {
-          padding: 8px 16px 6px 16px; // old: 3px 16px 6px 16px
-          min-width: 16px;
-          min-height: 16px;
+          padding: 3px 16px 6px 16px;
+          min-width: $rt-scale-x*16px; // old: 16px
+          min-height: $rt-scale-y*16px; // old: 16px
           border-radius: 0;
           outline-offset: -4px;
 
@@ -2226,8 +2230,8 @@ scrollbar {
 
   // slider
   slider {
-    min-width: 6px;
-    min-height: 6px;
+    min-width: $rt-scale-x*6px;
+    min-height: $rt-scale-y*6px;
     margin: -1px;
     border: 4px solid transparent;
     border-radius: 8px;
@@ -2289,9 +2293,9 @@ scrollbar {
 //
 switch {
   font-size: 0;
-  min-width: 52px;
-  min-height: 24px;
-  background-size: 52px 24px;
+  min-width: $rt-scale-x*52px;
+  min-height: $rt-scale-y*24px;
+  background-size: $rt-scale-x*52px $rt-scale-y*24px;
   background-repeat: no-repeat;
   background-position: center center;
   transition: all 350ms $ease-out-quad;
@@ -3054,8 +3058,8 @@ stacksidebar {
 }
 
 %sidebar_button {
-  min-width: 22px;
-  min-height: 22px;
+  min-width: $rt-scale-x*22px;
+  min-height: $rt-scale-y*22px;
   margin-top: 2px;
   margin-bottom: 2px;
   padding: 0;
@@ -3072,7 +3076,7 @@ placessidebar {
 
   row {
     // Needs overriding of the GtkListBoxRow padding
-    min-height: 28px;
+    min-height: $rt-scale-y*28px;
     padding: 2px 2px 2px 10px;
     // Using margins/padding directly in the SidebarRow
     // will make the animation of the new bookmark row jump
@@ -3426,8 +3430,8 @@ colorchooser .popover.osd { border-radius: 3px; }
 button.circular,
 button.circular-button {
   padding: 0;
-  min-width: 16px;
-  min-height: 24px;
+  min-width: $rt-scale-x*16px;
+  min-height: $rt-scale-y*24px;
   padding: 2px 6px;
   border-radius: 50%;
   -gtk-outline-radius: 50%;
@@ -3436,8 +3440,8 @@ button.circular-button {
 }
 
 .keycap {
-  min-width: 16px;
-  min-height: 20px;
+  min-width: $rt-scale-x*16px;
+  min-height: $rt-scale-y*20px;
 
   padding: 3px 6px 4px 6px;
 
@@ -3525,8 +3529,8 @@ headerbar,
   button.titlebutton { // csd titlebuttons
     margin: 0;
     padding: 0;
-    min-width: 32px; // old: 28px
-    min-height: 32px; // old: 28px
+    min-width: $rt-scale-x*21px; // old: 28px
+    min-height: $rt-scale-y*21px; // old: 28px
 
     @include button(undecorated);
     background-color: rgba($header_bg, 0.0);
@@ -3538,8 +3542,8 @@ headerbar,
       @include button(header-active);
     }
     &.close, &.maximize, &.minimize, &.restore { // csd windows control titlebuttons
-      min-width: 48px; // old: 30px
-      min-height: 32px; // old: 28px
+      min-width: (1+$rt-scale-x)*16px; // old: 30px
+      min-height: (1+$rt-scale-y)*14px; // old: 28px
       color: transparent;
       background-color: transparent;
       background-position: center;
@@ -3599,7 +3603,6 @@ popover.emoji-picker {
     box-shadow: none;
     border-width: 0 0 1px 0;
     padding: 4px 12px;
-    // margin: 2px 0 0 0;
   }
 
   scrolledwindow { border-bottom: 1px solid $borders_color; }

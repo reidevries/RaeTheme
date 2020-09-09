@@ -144,9 +144,9 @@ spinner {
       opacity: 0.5; }
 
 entry {
-  min-height: 32px;
+  min-height: 22px;
   border: 1px solid;
-  padding: 4px 16px;
+  padding: 4px 8px;
   caret-color: currentColor;
   border-radius: 4px;
   transition: all 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
@@ -260,12 +260,12 @@ treeview entry.flat, treeview entry {
     background-image: -gtk-gradient(radial, center center, 0, center center, 0.5, to(#a0406d), to(transparent)); } }
 
 button {
-  min-height: 32px;
-  min-width: 32px;
+  min-height: 24px;
+  min-width: 24px;
   transition: all 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
   border: 1px solid;
   border-radius: 3px;
-  padding: 2px 16px;
+  padding: 2px 8px;
   color: #261c21;
   border-color: rgba(0, 0, 0, 0.15);
   background-color: #fcfcfc; }
@@ -316,14 +316,14 @@ button {
         color: rgba(255, 255, 255, 0.8); }
   button.image-button {
     min-width: 24px;
-    padding-left: 5px;
-    padding-right: 5px; }
+    padding-left: 8px;
+    padding-right: 8px; }
   button.text-button {
     padding-left: 12px;
     padding-right: 12px; }
   button.text-button.image-button {
-    padding-left: 5px;
-    padding-right: 5px; }
+    padding-left: 6px;
+    padding-right: 6px; }
     button.text-button.image-button label:first-child {
       padding-left: 8px;
       padding-right: 2px; }
@@ -929,9 +929,9 @@ modelbutton.flat {
 menuitem.button.flat,
 modelbutton.flat {
   transition: none;
-  min-height: 32px;
-  padding-left: 16px;
-  padding-right: 16px;
+  min-height: 24px;
+  padding-left: 12px;
+  padding-right: 12px;
   outline-offset: -3px;
   border-radius: 2px; }
   menuitem.button.flat:hover,
@@ -947,12 +947,12 @@ modelbutton.flat {
   menuitem.button.flat radio:last-child,
   modelbutton.flat check:last-child,
   modelbutton.flat radio:last-child {
-    margin-left: 12px; }
+    margin-left: 8px; }
   menuitem.button.flat check:first-child,
   menuitem.button.flat radio:first-child,
   modelbutton.flat check:first-child,
   modelbutton.flat radio:first-child {
-    margin-right: 12px; }
+    margin-right: 8px; }
 
 modelbutton.flat arrow.left {
   -gtk-icon-source: -gtk-icontheme("pan-start-symbolic"); }
@@ -991,7 +991,7 @@ spinbutton:disabled {
   color: rgba(38, 28, 33, 0.55); }
 
 spinbutton:not(.vertical) entry {
-  min-width: 28px; }
+  min-width: 20px; }
 
 spinbutton:not(.vertical):dir(ltr) entry, spinbutton:not(.vertical):dir(rtl) button.up {
   border-radius: 3px 0 0 3px; }
@@ -1162,8 +1162,8 @@ actionbar {
   background-color: #efefef; }
 
 headerbar {
-  min-height: 64px;
-  padding: 0 16px;
+  min-height: 42px;
+  padding: 0 12px;
   color: #ccc7c9;
   background-color: #261c21; }
   headerbar:backdrop {
@@ -1171,12 +1171,12 @@ headerbar {
     color: rgba(204, 199, 201, 0.7);
     background-color: #35272e; }
   headerbar .title {
-    padding-left: 16px;
-    padding-right: 16px; }
+    padding-left: 12px;
+    padding-right: 12px; }
   headerbar .subtitle {
     font-size: smaller;
-    padding-left: 16px;
-    padding-right: 16px; }
+    padding-left: 12px;
+    padding-right: 12px; }
   headerbar.selection-mode {
     color: #ffffff;
     background-color: rgba(160, 64, 109, 0.95);
@@ -1187,8 +1187,8 @@ headerbar {
       color: rgba(255, 255, 255, 0.6); }
     headerbar.selection-mode .selection-menu {
       box-shadow: none;
-      padding-left: 16px;
-      padding-right: 16px; }
+      padding-left: 12px;
+      padding-right: 12px; }
       headerbar.selection-mode .selection-menu GtkArrow {
         -GtkArrow-arrow-scaling: 1; }
       headerbar.selection-mode .selection-menu .arrow {
@@ -1210,8 +1210,8 @@ headerbar {
       box-shadow: none; }
     headerbar.default-decoration button.titlebutton {
       border: none;
-      min-height: 32px;
-      min-width: 32px;
+      min-height: 22px;
+      min-width: 22px;
       margin: 0;
       padding: 0; }
 
@@ -1765,7 +1765,7 @@ menubar,
   menubar > menuitem,
   .menubar > menuitem {
     transition: all 0.2s cubic-bezier(0, 0, 0.2, 1);
-    padding: 6px 10px;
+    padding: 4px 10px;
     border: none;
     border-radius: 0 0px 0 0; }
     menubar > menuitem:hover,
@@ -1924,7 +1924,7 @@ notebook {
       padding-bottom: 0;
       border-bottom: 1px solid rgba(0, 0, 0, 0.15); }
       notebook > header.top > tabs > tab {
-        padding: 8px 16px 6px 16px;
+        padding: 3px 16px 6px 16px;
         min-width: 16px;
         min-height: 16px;
         border-radius: 0;
@@ -1943,7 +1943,7 @@ notebook {
       padding-top: 0;
       border-top: 1px solid rgba(0, 0, 0, 0.15); }
       notebook > header.bottom > tabs > tab {
-        padding: 8px 16px 6px 16px;
+        padding: 3px 16px 6px 16px;
         min-width: 16px;
         min-height: 16px;
         border-radius: 0;
@@ -1962,7 +1962,7 @@ notebook {
       padding-left: 0;
       border-left: 1px solid rgba(0, 0, 0, 0.15); }
       notebook > header.right > tabs > tab {
-        padding: 8px 16px 6px 16px;
+        padding: 3px 16px 6px 16px;
         min-width: 16px;
         min-height: 16px;
         border-radius: 0;
@@ -1981,7 +1981,7 @@ notebook {
       padding-right: 0;
       border-right: 1px solid rgba(0, 0, 0, 0.15); }
       notebook > header.left > tabs > tab {
-        padding: 8px 16px 6px 16px;
+        padding: 3px 16px 6px 16px;
         min-width: 16px;
         min-height: 16px;
         border-radius: 0;
@@ -3333,8 +3333,8 @@ headerbar button.titlebutton,
 .titlebar button.titlebutton {
   margin: 0;
   padding: 0;
-  min-width: 32px;
-  min-height: 32px;
+  min-width: 21px;
+  min-height: 21px;
   border-color: transparent;
   background-color: transparent;
   background-image: none;
@@ -3355,8 +3355,8 @@ headerbar button.titlebutton,
   .titlebar button.titlebutton.maximize,
   .titlebar button.titlebutton.minimize,
   .titlebar button.titlebutton.restore {
-    min-width: 48px;
-    min-height: 32px;
+    min-width: 32px;
+    min-height: 28px;
     color: transparent;
     background-color: transparent;
     background-position: center;
@@ -3742,7 +3742,7 @@ workbench.csd > stack.titlebar:not(headerbar) {
   border: none;
   box-shadow: none; }
   workbench.csd > stack.titlebar:not(headerbar) headerbar, workbench.csd > stack.titlebar:not(headerbar) headerbar:first-child, workbench.csd > stack.titlebar:not(headerbar) headerbar:last-child {
-    border-radius: 4px 4px 0 0; }
+    border-radius: 2px 2px 0 0; }
 
 editortweak .linked > entry.search:focus + .gb-linked-scroller {
   border-top-color: #a0406d; }
