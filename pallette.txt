@@ -9,6 +9,7 @@ Off-light-grey:				#bbb1b5 (old: #afb4ba, #bbc3c8, #D4D7D7, #d3d8e2, #cfd6e6, #b
 Off-grey:					#a09099 (old: #5f687d, #a9acb2, #5c616c, #8c919d, #9398a2, #80908f)
 Off-dark-grey:				#3e3b3c (old: #3b3c3e, #30343e, #303b3e, #6B6c73, #474d5d, #657372, #5e6a6a, #303d41, #32343D)
 Off-black:					#261c21 (old: #1b1d24, #2b3035, #22252c, #2e313d, #2b2f3b, #1E2128, #16171c, #252629, #191b1f, #14161c, #222b2e, #1b2224)
+Off-dark-black:				#130c11
 
 Warning Color:				#e3efaf (old: #F27835)
 Error Color:				#f7004e (old: #FC4138, #ff1616, #ff1111, #ff2121, #f04a50)
